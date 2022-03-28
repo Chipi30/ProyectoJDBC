@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Información</title>
+    <link rel="stylesheet" href="Styles/InfoEst.css">
+</head>
+<body>
+<!--Permite una consulta de la informacion-->
+<div class="login-box">
+    <form>
+        <label for="id">Id</label>
+        <input type="text" placeholder="Introduzca el id del estudiante" name="id" id="id" required autocomplete="off">
+    </form>
+
+    <div class="row">
+        <table id="Imformación Estudiante">
+            <thead >
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Evento</th>
+            </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+<script src = "../Script/infoEst.js"></script>
+</body>
+</html>

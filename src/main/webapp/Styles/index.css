@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../imagenes/fondo1.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+/*Cudro central*/
+.login-box {
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 170px 30px;
+}
+/*imagen con el titulo*/
+.login-box .avatar {
+    width: 320px;
+    height: 120px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 160px);
+}
+
+/*tamaño de los botones*/
+a{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+/*color y tamaño del boton*/
+.btn-1 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ef17e5;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+/*color cuando esta el raton*/
+.btn-1:hover {
+    cursor: pointer;
+    background: #f357ee;
+    color: #000;
+}
+/*color y tamaño del boton*/
+.btn-2 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #0f015b;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+/*color cuando esta el raton*/
+.btn-2:hover {
+    cursor: pointer;
+    background: #454eea;
+    color: #000;
+}
+/*color y tamaño del boton*/
+.btn-3 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ef9917;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+/*color cuando esta el raton*/
+.btn-3:hover {
+    cursor: pointer;
+    background: #e8ce33;
+    color: #000;
+}
+
