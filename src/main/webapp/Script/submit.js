@@ -1,12 +1,15 @@
-const xhr = new XMLHttpRequest();
-xhr.open('get','hello-servlet',true)
-xhr.onreadystatechange = ()=>{
-    if( xhr.readyState === 4 && xhr.status === 200 ){
-        const students = JSON.parse( xhr.responseText)
-        console.log( xhr.responseText)
+window.addEventListener("load", () =>{
+    const xhr = new XMLHttpRequest();
+    xhr.open('get','hello-servlet',true)
+    xhr.onreadystatechange = ()=>{
+        if( xhr.readyState === 4 && xhr.status === 200 ){
+            alert(xhr.responseText);
+            const students = JSON.parse( xhr.responseText)
+            console.log( xhr.responseText)
+        }
     }
-}
-xhr.send(null)
+    xhr.send(null)
+})
 
 document.querySelector("#student-form").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,9 +20,8 @@ document.querySelector("#student-form").addEventListener("submit", (e) => {
     const posicion = document.querySelector("#posicion").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open('post','hello-servlet',true);
+    xhr.open('POST','servlet-test',true);
     xhr.onload = () => {
-        alert(xhr.status);
         if(xhr.status === 200 && xhr.readyState === 4){
             alert(xhr.responseText);
         }

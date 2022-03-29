@@ -9,7 +9,7 @@ class CRUDestudiante {
 
     @Test
     void addStudent() {
-        factoty.createStudentDAO().addStudent( new Student(435,"Barrera Daniela","Inter-Curso", 10,"Danza","10"));
+        factoty.createStudentDAO().addStudent( new Student(0,"Barrera Daniela","Inter-Curso", 10,"Danza","10"));
     }
 
     @Test

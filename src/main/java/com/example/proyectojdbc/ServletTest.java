@@ -38,14 +38,15 @@ public class ServletTest extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain");
-        String ID = request.getParameter("ID");
         String name = request.getParameter("name");
         String evento = request.getParameter("evento");
         String curso = request.getParameter("curso");
-        String diciplina = request.getParameter("diciplina");
+        String diciplina = request.getParameter("disciplina");
         String posicion = request.getParameter("posicion");
+
+
         try( PrintWriter out = response.getWriter()){
-            out.println( ID + " " + name + " " + evento + " " + curso + " " + diciplina + " " + posicion );
+            out.println(name + " " + evento + " " + curso + " " + diciplina + " " + posicion );
         }
     }
    //patch modificar y put reemplazar
