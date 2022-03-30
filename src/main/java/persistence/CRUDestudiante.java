@@ -122,14 +122,14 @@ public class CRUDestudiante implements StudentDAO {
         try (Connection connection =
                      DriverManager.getConnection(URL, USER, PASSWD);
              Statement statement = connection.createStatement();
-             ResultSet result = statement.executeQuery("select * from estudiante");
+             ResultSet result = statement.executeQuery("SELECT * FROM estudiante INNER JOIN disciplina d on estudiante.diciplina = d.id INNER JOIN evento e on estudiante.evento = e.id");
         ) {
             while (result.next()) {
                 int ID = Integer.parseInt(result.getString("ID"));
                 String name = result.getString("nombre");
-                String evento = result.getString("evento");
+                String evento = result.getString("e.nombre");
                 int curso = Integer.parseInt(result.getString("curso"));
-                String diciplina = result.getString("diciplina");
+                String diciplina = result.getString("d.nombre");
                 String posicion = result.getString("posicion");
 
                 students.add(new Student(ID, name, evento, curso, diciplina, posicion));

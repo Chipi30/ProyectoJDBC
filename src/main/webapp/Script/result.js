@@ -16,6 +16,6 @@ window.addEventListener("load", () => {
 const addToTable = (object) => {
     const table = document.querySelector("#tableBody");
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${object.ID}</td><td>${object.name}</td><td>${object.curso}</td><td>${object.diciplina}</td><td>${object.posicion}</td>`;
+    tr.innerHTML = `<td>${object.ID}</td><td>${object.name}</td><td>${object.diciplina}</td><td>${object.evento}</td><td>${object.posicion}</td>`;
     table.append(tr);
 }
