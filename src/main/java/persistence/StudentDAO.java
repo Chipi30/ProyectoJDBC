@@ -17,4 +17,5 @@ public interface StudentDAO extends AutoCloseable {
 
     List<Student> getAllStudents();
 
+    Student getStudent(String id);
 }

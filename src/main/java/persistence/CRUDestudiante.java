@@ -73,6 +73,10 @@ public class CRUDestudiante implements StudentDAO {
             String diciplina = student.getDiciplina();
             String posicion = student.getPosicion();
 
+            final String query = "UPDATE `estudiante` SET `nombre` = '"+name +"', `evento` = '"+evento+"', `curso` = '"+curso+"' ,`diciplina` = '"+diciplina+"', `posicion` = '"+posicion+"' WHERE `ID` = "+ID+"";
+            statement.execute(query);
+            System.out.println(query);
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -80,7 +84,23 @@ public class CRUDestudiante implements StudentDAO {
 
     @Override
     public void delete(String code) {
+        try {
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
+        try (Connection connection =
+                     DriverManager.getConnection(URL, USER, PASSWD);
+        ) {
+            Statement statement = connection.createStatement();
+
+            final String query = "DELETE FROM estudiante WHERE ID = '"+code+"'";
+            statement.execute(query);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override
@@ -91,6 +111,12 @@ public class CRUDestudiante implements StudentDAO {
 
     @Override
     public List<Student> getAllStudents() {
+        try {
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         List<Student> students = new ArrayList<>();
 
         try (Connection connection =
@@ -99,10 +125,10 @@ public class CRUDestudiante implements StudentDAO {
              ResultSet result = statement.executeQuery("select * from estudiante");
         ) {
             while (result.next()) {
-                int ID = Integer.valueOf(result.getString("ID"));
-                String name = result.getString("name");
+                int ID = Integer.parseInt(result.getString("ID"));
+                String name = result.getString("nombre");
                 String evento = result.getString("evento");
-                int curso = Integer.valueOf(result.getString("curso"));
+                int curso = Integer.parseInt(result.getString("curso"));
                 String diciplina = result.getString("diciplina");
                 String posicion = result.getString("posicion");
 
@@ -114,6 +140,39 @@ public class CRUDestudiante implements StudentDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+        return null;
+    }
+
+    @Override
+    public Student getStudent(String id) {
+        try {
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try (Connection connection =
+                     DriverManager.getConnection(URL, USER, PASSWD)
+        ) {
+            final String query = "SELECT * FROM estudiante WHERE ID = '"+id+"'";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setMaxRows(1);
+            ResultSet rs = statement.executeQuery();
+            rs.next();
+
+            String nombre = rs.getString("nombre");
+            String evento = rs.getString("evento");
+            String curso = rs.getString("curso");
+            String disciplina = rs.getString("diciplina");
+            String posicion = rs.getString("posicion");
+
+            return new Student(Integer.parseInt(id), nombre, evento, Integer.parseInt(curso), disciplina, posicion);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
 
         return null;
     }

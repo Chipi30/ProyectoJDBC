@@ -6,9 +6,10 @@ body {
     font-family: sans-serif;
     height: 100vh;
 }
+
 .login-box {
     width: 820px;
-    height: 350px;
+    height: fit-content;
     background: #000000;
     color: #fff;
     top: 50%;
@@ -25,10 +26,52 @@ body {
     display: block;
 }
 
-.login-box input {
-    width: 100%;
-    margin-bottom: 20px;
+.modal-body, .modal-header {
+    background-color: #000000;
+    color: #FFFFFF;
 }
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+
+select{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    border: transparent;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+option{
+    background: #000000;
+    color: #ffffff;
+}
+
 
 .login-box input[type="text"]{
     border: none;
@@ -89,4 +132,306 @@ td, th {
     border-collapse: collapse;
     padding: 0.3em;
     caption-side: bottom;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.login-box a:hover {
+    color: #fff;
+}
+
+/*Cudro central*/
+.login1-box {
+    width: 320px;
+    height: 480px;
+    background: #000;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.login1-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login1-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login1-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login1-box input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login1-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login1-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+.login1-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.login1-box a:hover {
+    color: #fff;
+}
+
+/*Cudro central*/
+.login2-box {
+    width: 320px;
+    height: 480px;
+    background: #000;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(80%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.login2-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login2-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login2-box input, button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login2-box input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login2-box button[type="button"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login2-box button[type="button"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+.login2-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.login2-box a:hover {
+    color: #fff;
+}
+
+button[type="reset"]{
+    background-color: red;
+}
+h1, .modal-header {
+    color: #ffffff;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+label {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+input, button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+button[type="button"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.modal-body, .modal-header {
+    background-color: #000000;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+
+
+select{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    border: transparent;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+option{
+    background: #000000;
+    color: #ffffff;
 }
